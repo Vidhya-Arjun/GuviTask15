@@ -9,8 +9,8 @@ class BaseCode():
         self.driver = driver
         self.wait = WebDriverWait(self.driver,timeout)
     def locate_and_sendkeys(self,locator,value):
-         element = self.wait.until(expected_conditions.presence_of_element_located(locator))
-         element.sendkeys(value)
+         element = self.wait.until(expected_conditions.visibility_of_element_located(locator))
+         element.send_keys(value)
     def click_action(self,locator):
         element = self.wait.until(expected_conditions.element_to_be_clickable(locator))
         element.click()
