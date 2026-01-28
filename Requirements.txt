@@ -3,4 +3,3 @@ selenium
 pytest-html
 openpyxl
 pyyaml
-pandas
