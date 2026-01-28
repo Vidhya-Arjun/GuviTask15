@@ -8,10 +8,13 @@ class Login(BaseCode):
     def __init__(self,driver):
         super().__init__(driver)
     def send_user_name(self,value):
-        self.locate_and_sendkeys(self.username,value)
-
+        element = self.locate_element(self.username)
+        element.clear()
+        element.send_keys(value)
     def send_password(self,value):
-        self.locate_and_sendkeys(self.password,value)
+        element = self.locate_element(self.password)
+        element.clear()
+        element.send_keys(value)
     def login_click(self):
         self.click_action(self.login)
     def OpenUrl(self,url):
